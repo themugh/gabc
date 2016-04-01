@@ -15,7 +15,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085A1;
+  color: #0080A6;
 }
 a img:hover,
 a img:focus {
@@ -28,8 +28,7 @@ blockquote {
 hr.small {
   max-width: 100px;
   margin: 15px auto;
-  border-width: 4px;
-  border-color: white;
+  border: 4px white;
 }
 .navbar-custom {
   position: absolute;
@@ -94,14 +93,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085A1;
+    color: #0080A6;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085A1;
+    color: #0080A6;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -113,75 +112,285 @@ hr.small {
   }
 }
 .site-header {
-  background-color: #808080;
-  background: no-repeat center center;
-  background-attachment: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  background-image: url('../img/home-bg.jpg');
+  background: #808080 url('../img/home-bg.jpg') no-repeat scroll center center;
+  width: 100%;
+  height: 500px;
 }
-.site-header .site-heading,
-.site-header .post-heading,
-.site-header .page-heading {
-  padding: 100px 0 50px;
-  color: white;
-}
-@media only screen and (min-width: 768px) {
-  .site-header .site-heading,
-  .site-header .post-heading,
-  .site-header .page-heading {
-    padding: 150px 0;
-  }
-}
-.site-header .site-heading,
-.site-header .page-heading {
+.site-header .site-heading {
+  position: relative;
+  top: 50%;
+  left: 0;
+  color: #ffffff;
   text-align: center;
+  padding: 0 15px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-.site-header .site-heading h1,
-.site-header .page-heading h1 {
-  margin-top: 0;
-  margin-bottom: 15px;
+.site-header .site-heading h1 {
+  margin: 0 0 15px 0;
   font-size: 2em;
   font-weight: 300;
   line-height: 150%;
 }
-.site-header .site-heading .subheading,
-.site-header .page-heading .subheading {
+.site-header .site-heading h2 {
+  margin: 0;
   font-size: 1.5em;
   line-height: 150%;
-  display: block;
   font-weight: 200;
-  margin: 10px 0 0;
 }
 @media only screen and (min-width: 768px) {
-  .site-header .site-heading h1,
-  .site-header .page-heading h1 {
+  .site-header .site-heading h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
   }
-  .site-header .site-heading .subheading,
-  .site-header .page-heading .subheading {
+  .site-header .site-heading h2 {
     font-size: 1.8em;
   }
 }
-.section .title {
+.main-content {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .main-content {
+    width: 85%;
+  }
+}
+.main-content .title {
   font-size: 2em;
-  margin: .8em 0 .5em;
+  margin: 32px 0 0.5em 0;
   font-weight: 100;
   line-height: 1.25em;
 }
-.section .content {
+.main-content .content {
   text-align: justify;
   font-size: 16px;
   line-height: 30.4px;
   color: #666;
+  margin: 0 0 32px 0;
+}
+#agenda {
+  background-color: #0080A6;
+}
+#agenda .title {
+  color: #ffffff;
 }
 #agenda .content {
-  text-align: justify;
+  color: #ffffff;
   font-size: 14px;
-  line-height: 150%;
+}
+#agenda .content ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+#agenda .content ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+  text-align: left;
+  min-height: 50px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  #agenda .content ul li {
+    padding: 5px;
+  }
+}
+#agenda .content ul li:first-child {
+  border-top: 3px solid #fff;
+}
+#agenda .content ul li:last-child {
+  border-bottom: 3px solid #fff;
+}
+#agenda .content ul li .time-slot1,
+#agenda .content ul li .time-slot2,
+#agenda .content ul li .session,
+#agenda .content ul li .session1,
+#agenda .content ul li .session2 {
+  position: relative;
+  display: block;
+  float: left;
+}
+#agenda .content ul li .time-slot1 {
+  margin-right: 2%;
+  width: 35%;
+}
+@media only screen and (min-width: 499px) {
+  #agenda .content ul li .time-slot1 {
+    width: 28%;
+  }
+}
+#agenda .content ul li .time-slot2 {
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 0.5px dotted #fff;
+}
+@media only screen and (min-width: 768px) {
+  #agenda .content ul li .time-slot2 {
+    margin-right: 2%;
+    width: 28%;
+    padding-bottom: 0;
+    border: none;
+  }
+}
+#agenda .content ul li .session {
+  width: 63%;
+}
+@media only screen and (min-width: 499px) {
+  #agenda .content ul li .session {
+    width: 70%;
+  }
+}
+#agenda .content ul li .session1,
+#agenda .content ul li .session2 {
+  width: 100%;
+  margin-top: 5px;
+}
+@media only screen and (min-width: 500px) {
+  #agenda .content ul li .session1,
+  #agenda .content ul li .session2 {
+    width: 49%;
+    margin: 5px 0 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #agenda .content ul li .session1,
+  #agenda .content ul li .session2 {
+    width: 34%;
+    margin: 0;
+  }
+}
+#agenda .content ul li .session1 {
+  padding-right: 1%;
+}
+@media only screen and (max-width: 499px) {
+  #agenda .content ul li .session1 {
+    border-bottom: 1px dotted #fff;
+  }
+}
+@media only screen and (min-width: 500px) {
+  #agenda .content ul li .session1 {
+    border-right: 1px dotted #fff;
+  }
+}
+#agenda .content ul li .session2 {
+  padding-left: 1%;
+}
+#speakers {
+  background-color: #1A1A1A;
+}
+#speakers .title {
+  color: #ffffff;
+}
+#speakers .content {
+  color: #ffffff;
+  overflow: hidden;
+}
+@media only screen and (min-width: 1200px) {
+  #speakers .content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#speakers .content .speakers-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#speakers .content .speakers-list .speaker {
+  float: left;
+  width: 70%;
+  margin: 0 15% 30px;
+  text-align: center;
+}
+@media only screen and (min-width: 446px) {
+  #speakers .content .speakers-list .speaker {
+    width: 45%;
+    margin: 0 0 30px 0;
+  }
+  #speakers .content .speakers-list .speaker:nth-child(odd) {
+    margin-right: 10%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #speakers .content .speakers-list .speaker {
+    width: 30%;
+    margin: 0 0 30px 0;
+  }
+  #speakers .content .speakers-list .speaker:nth-child(odd) {
+    margin-right: 0;
+  }
+  #speakers .content .speakers-list .speaker:nth-child(3n-1) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 1030px) {
+  #speakers .content .speakers-list .speaker {
+    width: 20%;
+    margin: 0 0 30px 0;
+  }
+  #speakers .content .speakers-list .speaker:nth-child(n) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #speakers .content .speakers-list .speaker:nth-child(4n-2) {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  #speakers .content .speakers-list .speaker:nth-child(4n-1) {
+    margin-right: 6%;
+  }
+}
+#speakers .content .speakers-list .speaker .avatar {
+  margin: 0 auto 10px;
+  height: 100%;
+  width: 100%;
+  padding: 50% 0;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  background: transparent;
+  overflow: hidden;
+}
+#speakers .content .speakers-list .speaker .avatar img {
+  border-radius: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#speakers .content .speakers-list .speaker .name {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 0 10px;
+}
+#speakers .content .speakers-list .speaker .company,
+#speakers .content .speakers-list .speaker .role {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+#speakers .content .speakers-list .speaker .role {
+  margin-bottom: 10px;
 }
 #venue iframe {
   width: 100%;
@@ -207,12 +416,12 @@ footer .copyright {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085A1;
+  background: #0080A6;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085A1;
+  background: #0080A6;
 }
 img::selection {
   color: white;
@@ -221,7 +430,4 @@ img::selection {
 img::-moz-selection {
   color: white;
   background: transparent;
-}
-body {
-  webkit-tap-highlight-color: #0085A1;
 }

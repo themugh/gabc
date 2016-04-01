@@ -32,4 +32,13 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
+<<<<<<< HEAD
 .idea
+=======
+
+dist
+
+.idea
+
+idea
+>>>>>>> origin/master

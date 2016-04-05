@@ -232,6 +232,19 @@ hr.small {
     color: #ffffff;
     font-size: 14px;
 
+    a, a:active {
+      text-decoration: none;
+      height: auto;
+      width: auto;
+      overflow: hidden;
+      cursor: pointer;
+      color: #ffffff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     ul {
       list-style: none;
       display: block;
@@ -397,6 +410,15 @@ hr.small {
           }
         }
 
+        a, a:hover, a:active {
+          text-decoration: none;
+          height: auto;
+          width: auto;
+          overflow: hidden;
+          cursor: pointer;
+          color: #ffffff;
+        }
+
         .avatar {
           margin: 0 auto 10px;
           height: 100%;
@@ -408,6 +430,7 @@ hr.small {
           text-align: center;
           background: transparent;
           overflow: hidden;
+          cursor: pointer;
 
           img {
             border-radius: 50%;
@@ -417,6 +440,9 @@ hr.small {
             position: absolute;
             left: 0;
             top: 0;
+            box-shadow: 0 0 12px rgba(0,0,0,.2);
+            border: 4px solid #fff;
+            cursor: pointer;
           }
         }
 
@@ -425,6 +451,7 @@ hr.small {
           line-height: 20px;
           font-weight: 400;
           padding:0;
+          color: #ffffff;
           margin: 0 0 10px;
         }
 
@@ -454,6 +481,174 @@ hr.small {
     @media only screen and (min-width: 768px) {
       width: 600px;
       height: 450px;
+    }
+  }
+}
+
+.spk-list {
+  width: 75%;
+  margin: 10px auto;
+  text-align: center;
+
+  ul {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:16px;
+    font-weight: 400;
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-align: center;
+
+    li {
+      padding: 3px 5px;
+      margin: 3px 5px;
+      position: relative;
+      display: inline-block;
+
+      a {
+        color: #0994d9 !important;
+        text-decoration: none;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#speaker-profiles {
+  padding-bottom:16px;
+  background-color: #FFFFFF;
+
+  .speaker {
+    min-height: 100px;
+    overflow: hidden;
+    border-top: solid 1px #eeeeee;
+    padding: 15px 0 10px 0;
+
+    @media only screen and (min-width: 768px) {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .speaker-col1 {
+      padding: 10px;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+
+      @media only screen and (min-width: 768px) {
+        padding: 0;
+        width: 25%;
+        float: right;
+      }
+
+      img.avatar {
+        display: block;
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 50%;
+        box-shadow: 0 0 12px rgba(0,0,0,.2);
+        border: 4px solid #fff;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media only screen and (min-width: 768px) {
+          width: 90%;
+          height: auto;
+          float: right;
+          margin: 0;
+          border-radius: 0;
+        }
+      }
+    }
+
+    .speaker-col2 {
+      padding: 0 10px;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      color: #464446;
+
+      @media only screen and (min-width: 768px) {
+        width: 74%;
+        float: left;
+      }
+
+      .name {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 40px;
+        margin: 0 0 10px 0;
+        text-align: center;
+
+        @media only screen and (min-width: 768px) {
+          text-align: left;
+        }
+      }
+
+      .role {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        text-align: center;
+
+        @media only screen and (min-width: 768px) {
+          text-align: left;
+        }
+      }
+
+      .profile {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 16px;
+        line-height: 26px;
+        margin: 0 0 10px 0;
+        text-align: justify;
+      }
+
+      .social {
+        font-family: 'Source Sans Pro', sans-serif;
+        margin: 0;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        color: #55acee;
+
+        @media only screen and (min-width: 768px) {
+          padding-left: 20px;
+          text-align: left;
+        }
+
+        a {
+          position: relative;
+          color: #55acee;
+          background: transparent;
+          text-decoration: none;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out;
+          font-size: 16px;
+          line-height: 150%;
+          height: auto;
+        }
+
+        .twitter:before {
+          content: "\f099";
+          font-family: 'FontAwesome';
+          text-decoration: inherit;
+          color: #55acee;
+          font-size: 18px;
+          position: absolute;
+          top: -2px;
+          left: -20px;
+        }
+      }
     }
   }
 }

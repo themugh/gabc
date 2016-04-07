@@ -430,9 +430,19 @@ hr.small {
   }
 }
 .spk-list {
-  width: 75%;
+  width: 90%;
   margin: 10px auto;
   text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .spk-list {
+    width: 500px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .spk-list {
+    width: 700px;
+  }
 }
 .spk-list ul {
   font-family: 'Source Sans Pro', sans-serif;

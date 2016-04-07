@@ -486,9 +486,17 @@ hr.small {
 }
 
 .spk-list {
-  width: 75%;
+  width: 90%;
   margin: 10px auto;
   text-align: center;
+  
+   @media only screen and (min-width: 600px) {
+      width: 500px;
+    }
+    
+     @media only screen and (min-width: 800px) {
+      width: 700px;
+    }
 
   ul {
     font-family: 'Source Sans Pro', sans-serif;

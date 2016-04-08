@@ -220,6 +220,45 @@ hr.small {
   }
 }
 
+#about {
+  .welcome-title {
+    font-size: 2em;
+    margin: @main-content-margin 0 1em 0;
+    font-weight: 100;
+    line-height: 1.25em;
+    text-align: center;
+  }
+
+  .welcome-content {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 30.4px;
+    color: #666;
+    margin: 0 0 @main-content-margin 0;
+    text-align: center;
+
+    iframe {
+      width:100%;
+      height:auto;
+
+      @media only screen and (min-width: 562px) {
+        width:560px;
+        height:315px;
+      }
+
+
+      @media only screen and (min-width: 642px) {
+        width:640px;
+        height:360px;
+      }
+
+      @media only screen and (min-width: 962px) {
+        width:960px;
+        height:540px;
+      }
+    }
+  }
+}
 #agenda {
   background-color: @primary;
 

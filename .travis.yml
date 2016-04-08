@@ -12,6 +12,8 @@ script: gulp build
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
+    git config --global user.email "shravan.kasagoni@outlook.com"
+    git config --global user.name "Shravan Kumar kasagoni"
     git clone https://themugh:$GITHUB_API_KEY@github.com/themugh/gabc2016.git deploy-web
     cd deploy-web
     git checkout --orphan gh-pages

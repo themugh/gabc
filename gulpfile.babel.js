@@ -52,7 +52,9 @@ gulp.task('watch', () => {
     gulp.watch('js/*.js', browserSync.reload);
 });
 
-gulp.task('build', ['clean', 'useref', 'copy']);
+gulp.task('build', () => {
+    runSequence(['clean', 'useref', 'copy']);
+});
 
 gulp.task('default', () => {
     runSequence(['less', 'browser-sync', 'watch']);

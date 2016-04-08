@@ -590,7 +590,7 @@ hr.small {
 }
 #speaker-profiles .speaker .speaker-col2 .social .twitter:before {
   content: "\f099";
-  font-family: 'FontAwesome';
+  font-family: 'FontAwesome', serif;
   text-decoration: inherit;
   color: #55acee;
   font-size: 18px;

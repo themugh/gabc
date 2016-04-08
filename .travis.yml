@@ -15,7 +15,7 @@ after_success: |
     cd dist
     git checkout -b gh-pages
     git add .
-    git -c user.name='travis' -c user.email='travis' commit -m
+    git -c user.name='travis' -c user.email='travis' commit -m "deploy"
     # Make sure to make the output quiet, or else the API token will leak!
     # This works because the API key can replace your password.
     git push -f -q https://themugh:$GITHUB_API_KEY@github.com/themugh/gabc2016-gh-pages gh-pages &2>/dev/null

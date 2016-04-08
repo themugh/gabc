@@ -8,4 +8,4 @@ before_install:
   - npm install -g gulp
 install:
   - npm install
-script: gulp
+script: gulp build

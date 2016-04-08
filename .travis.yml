@@ -12,11 +12,16 @@ script: gulp build
 after_success: |
   if [ -n "$GITHUB_API_KEY" ]; then
     cd "$TRAVIS_BUILD_DIR"
-    cd dist
-    git init
+    git clone https://themugh:$GITHUB_API_KEY@github.com/themugh/gabc2016.git deploy-web
+    cd deploy-web
+    git checkout --orphan gh-pages
+    git rm -rf .
+    cd ..
+    cp -f dist ./deploy-web
+    cd deploy-web
     git add .
-    git -c user.name='travis' -c user.email='travis' commit -m "deploy"
-    git remote add origin https://themugh:$GITHUB_API_KEY@github.com/themugh/gabc2016.git
+    git -c -R user.name='travis' -c user.email='travis' commit -m "deploy"
+    # git remote add origin https://themugh:$GITHUB_API_KEY@github.com/themugh/gabc2016.git
     git push -u origin gh-pages
     cd "$TRAVIS_BUILD_DIR"
   fi

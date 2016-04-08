@@ -16,11 +16,11 @@ after_success: |
     git config --global user.name "Shravan Kumar kasagoni"
     git clone https://themugh:$GITHUB_API_KEY@github.com/themugh/gabc2016.git deploy-web
     cd deploy-web
-    git checkout --orphan gh-pages
+    git checkout gh-pages
     git rm -rf .
-    cd ..
-    cp -f -R ./dist ./deploy-web
-    cd deploy-web
+    cd ../dist
+    cp -f -r . ../deploy-web
+    cd ../deploy-web
     git add .
     git commit -a -m "deploy"
     # git remote add origin https://themugh:$GITHUB_API_KEY@github.com/themugh/gabc2016.git
